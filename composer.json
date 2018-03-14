@@ -19,7 +19,7 @@
     "require": {
         "php": "^7.0",
         "psr/http-server-handler": "^1.0",
-        "guzzlehttp/psr7": "^1.4"
+        "zendframework/zend-diactoros": "^1.7"
     },
     "require-dev": {
         "behat/behat": "^3.4",

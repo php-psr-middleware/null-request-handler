@@ -14,9 +14,7 @@ class FeatureContext implements Context
      */
     public function aResponseIsReturned()
     {
-        $this->response = $this->handler->handle(new GuzzleHttp\Psr7\Request(
-            'GET', 'example.php'
-        ));
+        $this->response = $this->handler->handle(new Zend\Diactoros\ServerRequest());
     }
 
     /**

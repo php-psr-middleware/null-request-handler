@@ -40,6 +40,6 @@ class FeatureContext implements Context
      */
     public function constructorArgumentIs2($arg1)
     {
-        $this->handler = new NullRequestHandler($arg1);
+        $this->handler = new \PsrMiddlewares\NullRequestHandler($arg1);
     }
 }

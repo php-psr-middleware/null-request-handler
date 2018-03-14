@@ -51,6 +51,9 @@
         ],
         "install-pkgs": [
             "@composer install --prefer-dist"
+        ],
+        "test":[
+            "vendor/bin/behat"
         ]
     },
     "extra": {

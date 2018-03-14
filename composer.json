@@ -1,0 +1,57 @@
+{
+    "name": "php-psr-middleware/null-request-handler",
+    "type": "library",
+    "description": "Null PHP PSR Request Handler that returns a new Response with the provided HTTP status.",
+    "keywords": [
+        "php", "psr", "psr15", "psr-15", "request-handler", "requesthandler", "response"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Praveen Saxena",
+            "email": "saxep01@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/php-psr-middleware/null-request-handler",
+    "support": {
+        "issues": "https://github.com/php-psr-middleware/null-request-handler/issues"
+    },
+    "require": {
+        "php": "^7.0",
+        "psr/http-server-handler": "^1.0",
+        "guzzlehttp/psr7": "^1.4"
+    },
+    "require-dev": {
+        "behat/behat": "^3.4",
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "phpunit/phpunit": "^7.0",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PsrMiddlewares\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PsrMiddlewares\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "finstall": [
+            "@clean",
+            "@composer clearcache",
+            "@install-pkgs"
+        ],
+        "clean": [
+            "rm -rf composer.lock vendor"
+        ],
+        "install-pkgs": [
+            "@composer install --prefer-dist"
+        ]
+    },
+    "extra": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

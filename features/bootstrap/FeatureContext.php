@@ -37,7 +37,7 @@ class FeatureContext implements Context
     /**
      * @Given constructor argument is :arg1
      */
-    public function constructorArgumentIs2($arg1)
+    public function constructorArgumentIs2(int $arg1)
     {
         $this->handler = new \PsrMiddlewares\NullRequestHandler($arg1);
     }

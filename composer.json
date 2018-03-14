@@ -35,7 +35,10 @@
     "autoload-dev": {
         "psr-4": {
             "PsrMiddlewares\\Tests\\": "tests"
-        }
+        },
+        "files": [
+
+        ]
     },
     "scripts": {
         "finstall": [

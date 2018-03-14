@@ -3,6 +3,7 @@ declare(strict_types = 1);
 
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
+use PHPUnit\Framework\Assert;
 
 class FeatureContext implements Context
 {
@@ -22,7 +23,7 @@ class FeatureContext implements Context
      */
     public function theResponseBodyIsEmpty()
     {
-        $this->response->getBody() === '';
+        Assert::assertEquals($this->response->getBody(), '');
     }
 
     /**
@@ -30,7 +31,7 @@ class FeatureContext implements Context
      */
     public function theResponseStatusCodeIs($arg1)
     {
-        $this->response->getStatusCode() === $arg1;
+        Assert::assertEquals($this->response->getStatusCode(), $arg1);
     }
 
     /**

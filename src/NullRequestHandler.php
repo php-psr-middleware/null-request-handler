@@ -9,17 +9,24 @@ use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response;
 
 
+/**
+ * RequestHandlerInterface handler implementation.
+ * Creates Psr\Http\Message\ResponseInterface with provided status code.
+ */
 class NullRequestHandler implements RequestHandlerInterface
 {
-    private $statusCode;
 
+    /** @var int */
+    private $_statusCode;
+
+    /** @param int $statusCode */
     public function __construct(int $statusCode)
     {
-        $this->statusCode = $statusCode;
+        $this->_statusCode = $statusCode;
     }
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        return new Response('php://memory', $this->statusCode);
+        return new Response('php://memory', $this->_statusCode);
     }
 }
